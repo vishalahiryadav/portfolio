@@ -1,6 +1,6 @@
 
 
-const Stars = () => {
+const  Stars = () => {
   return (
     <div>Stars</div>
   )
