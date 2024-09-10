@@ -42,8 +42,8 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <img src={logo} alt='logo' className='w-9 h-9 object-contain' />
-          <p className='text-white text-[18px] font-bold cursor-pointer flex '>
+          <img src={logo} alt='logo' className='w-10 object-contain' />
+          <p className='text-white pl-2 text-[18px] font-bold cursor-pointer flex '>
             Vishal &nbsp;
             <span className='sm:block hidden'> | VAY</span>
           </p>
