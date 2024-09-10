@@ -1,8 +1,6 @@
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
-import { toast } from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css';
 
 import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
@@ -50,8 +48,8 @@ const Contact = () => {
       .then(
         () => {
           setLoading(false);
-          // alert("Thank you. I will get back to you as soon as possible.");
-          toast.success("Message sent successfully!");
+          alert("Thank you. I will get back to you as soon as possible.");
+
           setForm({
             name: "",
             email: "",
@@ -61,8 +59,8 @@ const Contact = () => {
         (error) => {
           setLoading(false);
           console.error(error);
-          toast.error("Error while sending the message.");
-          // alert("Ahh, something went wrong. Please try again.");
+
+          alert("Ahh, something went wrong. Please try again.");
         }
       );
   };
