@@ -41,7 +41,8 @@ import {
       icon: web,
     },
     {
-      title: "React Native Developer",
+      // title: "React Native Developer",
+      title: "soon...",
       icon: mobile,
     },
 
@@ -100,29 +101,30 @@ import {
   
   const experiences = [
     {
+      title: "React Developer",
+      company_name: "Testwin & Umla",
+      icon: altieReality,
+      iconBg: "#E6DEDD",
+      date: "May 2024 - Present",
+      points: [
+        "Developing and maintaining web applications using React.js and other related technologies.",
+        "Collaborating with cross-functional teams including designers, product managers.",
+         "Using 3d components and structure during production.",
+      ],
+    },
+    {
       title: "React.js Developer",
       company_name: "Poodles Petcare",
       icon: poodles,
       iconBg: "#383E56",
-      date: "March 2020 - April 2021",
+      date: "June 2023 - May 2024",
       points: [
         "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      ],
-    },
+        "Integrated Firebase for real-time updates and user authentication, ensuring a seamless user experience.",
+         "Utilized Tailwind CSS to design responsive UIs, speeding up the development process"
+        ],
+      },
 
-    {
-      title: "React Native Developer",
-      company_name: "AltieReality",
-      icon: altieReality,
-      iconBg: "#E6DEDD",
-      date: "Jan 2021 - Feb 2022",
-      points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Using 3d components and structure during production.",
-      ],
-    },
     
     
   ];
@@ -194,16 +196,16 @@ import {
       source_code_link: "https://poodles.in/",
     },
     {
-      name: "AR/VR Content site",
+      name: "Testwin/Umla DashBoard",
       description:
-        "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+        "An interactive learning experience to help students prepare for competitive exams, entrance tests and other assessments by playing Games.",
       tags: [
         {
-          name: "nextjs",
+          name: "reactjs",
           color: "blue-text-gradient",
         },
         {
-          name: "supabase",
+          name: "Appwrite",
           color: "green-text-gradient",
         },
         {
