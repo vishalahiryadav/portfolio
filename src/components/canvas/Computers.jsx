@@ -1,6 +1,7 @@
 import React, { Suspense, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
+
 import CanvasLoader from "../Loader";
 
 const Computers = ({ isMobile }) => {
@@ -13,9 +14,9 @@ const Computers = ({ isMobile }) => {
         position={[-20, 50, 10]}
         angle={0.12}
         penumbra={1}
-        intensity={isMobile ? 0.5 : 1} // Lower intensity on mobile
-        castShadow={!isMobile} // Disable shadows on mobile
-        shadow-mapSize={isMobile ? 512 : 1024} // Lower shadow resolution on mobile
+        intensity={1}
+        castShadow
+        shadow-mapSize={1024}
       />
       <pointLight intensity={1} />
       <primitive
@@ -31,35 +32,24 @@ const Computers = ({ isMobile }) => {
 const ComputersCanvas = () => {
   const [isMobile, setIsMobile] = useState(false);
 
-  // Check if WebGL is available
-  function isWebGLAvailable() {
-    try {
-      const canvas = document.createElement('canvas');
-      return !!window.WebGLRenderingContext && 
-             (canvas.getContext('webgl') || canvas.getContext('experimental-webgl'));
-    } catch (e) {
-      return false;
-    }
-  }
-
   useEffect(() => {
-    if (!isWebGLAvailable()) {
-      console.error("WebGL is not supported on this device.");
-    }
+    // Add a listener for changes to the screen size
+    const mediaQuery = window.matchMedia("(max-width: 500px)");
 
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 500);
+    // Set the initial value of the `isMobile` state variable
+    setIsMobile(mediaQuery.matches);
+
+    // Define a callback function to handle changes to the media query
+    const handleMediaQueryChange = (event) => {
+      setIsMobile(event.matches);
     };
 
-    // Set initial state
-    handleResize();
+    // Add the callback function as a listener for changes to the media query
+    mediaQuery.addEventListener("change", handleMediaQueryChange);
 
-    // Add resize event listener
-    window.addEventListener("resize", handleResize);
-
-    // Clean up event listener on component unmount
+    // Remove the listener when the component is unmounted
     return () => {
-      window.removeEventListener("resize", handleResize);
+      mediaQuery.removeEventListener("change", handleMediaQueryChange);
     };
   }, []);
 
@@ -67,7 +57,7 @@ const ComputersCanvas = () => {
     <Canvas
       frameloop='demand'
       shadows
-      dpr={isMobile ? 1 : [1, 2]}  // Lower DPR for mobile
+      dpr={[1, 2]}
       camera={{ position: [20, 3, 5], fov: 25 }}
       gl={{ preserveDrawingBuffer: true }}
     >
