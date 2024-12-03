@@ -11,13 +11,15 @@ import {
     git,
     figma,
     threejs,
+    umla,
     altieReality,
     poodles,
     graphQL,
     firebase,
     jalvayu,
     poodlesLayout,
-    altieRealityLayout,
+    testwin,
+    umlaLayout
   } from "../assets";
   
   export const navLinks = [
@@ -101,15 +103,15 @@ import {
   
   const experiences = [
     {
-      title: "React Developer",
+      title: "Frontend Developer",
       company_name: "Testwin & Umla",
-      icon: altieReality,
+      icon: umla,
       iconBg: "#E6DEDD",
       date: "May 2024 - Present",
       points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers.",
-         "Using 3d components and structure during production.",
+        "Collaborated with teams to build high-quality, scalable web applications.",
+        "Developed the CMS for Umla and Testwin.",
+         "Improved UI/UX by 20% and built an admin dashboard to streamline user and data management.",
       ],
     },
     {
@@ -124,7 +126,17 @@ import {
          "Utilized Tailwind CSS to design responsive UIs, speeding up the development process"
         ],
       },
-
+      {
+        title: "Web Developer Intern",
+        company_name: "Altiereality",
+        icon: altieReality,
+        iconBg: "#383E56",
+        date: "August 2022 - February 2023",
+        points: [
+          "Developed user interfaces with modern JavaScript frameworks, HTML5, and CSS3..",
+          "Attended development programs to gain competencies and enhance skill sets.",
+          ],
+        },
     
     
   ];
@@ -196,7 +208,7 @@ import {
       source_code_link: "https://poodles.in/",
     },
     {
-      name: "Testwin/Umla DashBoard",
+      name: "Testwin",
       description:
         "An interactive learning experience to help students prepare for competitive exams, entrance tests and other assessments by playing Games.",
       tags: [
@@ -213,8 +225,29 @@ import {
           color: "pink-text-gradient",
         },
       ],
-      image: altieRealityLayout,
-      source_code_link: "https://www.altiereality.com/",
+      image: testwin,
+      source_code_link: "https://testwin.in/",
+    },
+    {
+      name: "Umla DashBoard",
+      description:
+        "An interactive learning experience to help students prepare for competitive exams, entrance tests and other assessments by playing Games.",
+      tags: [
+        {
+          name: "reactjs",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "Appwrite",
+          color: "green-text-gradient",
+        },
+        {
+          name: "Api",
+          color: "blue-text-gradient",
+        },
+      ],
+      image: umlaLayout,
+      source_code_link: "https://www.umla.in/",
     },
   ];
   

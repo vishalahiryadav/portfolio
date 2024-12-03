@@ -22,12 +22,15 @@ import firebase from './tech/firebase.svg'
 
 import altieReality from './company/altieReality.png'
 import poodles from './company/logo.svg'
+import umla from './company/umla.jpg'
+
 
 
 
 import jalvayu from './jalvayu.png'
 import poodlesLayout from './poodles.png'
-import altieRealityLayout from './altiereality.png'
+import testwin from './testwin.png'
+import umlaLayout from './umlaLayout.png'
 
 export {
   logo,
@@ -52,8 +55,10 @@ export {
 
   altieReality,
   poodles,
+  umla,
 
   jalvayu,
   poodlesLayout,
-  altieRealityLayout,
+  testwin,
+  umlaLayout,
 };
